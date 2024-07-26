@@ -1,0 +1,130 @@
+[
+{
+  "model": "arriendo_app.region",
+  "pk": 1,
+  "fields": {
+    "nombre": "Región de Arica y Parinacota",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 2,
+  "fields": {
+    "nombre": "Región de Tarapacá",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 3,
+  "fields": {
+    "nombre": "Región de Antofagasta",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 4,
+  "fields": {
+    "nombre": "Región de Atacama",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 5,
+  "fields": {
+    "nombre": "Región de Coquimbo",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 6,
+  "fields": {
+    "nombre": "Región de Valparaíso",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 7,
+  "fields": {
+    "nombre": "Región Metropolitana de Santiago",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 8,
+  "fields": {
+    "nombre": "Región del Libertador General Bernardo O'Higgins",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 9,
+  "fields": {
+    "nombre": "Región del Maule",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 10,
+  "fields": {
+    "nombre": "Región de Ñuble",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 11,
+  "fields": {
+    "nombre": "Región del Biobío",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 12,
+  "fields": {
+    "nombre": "Región de La Araucanía",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 13,
+  "fields": {
+    "nombre": "Región de Los Ríos",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 14,
+  "fields": {
+    "nombre": "Región de Los Lagos",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 15,
+  "fields": {
+    "nombre": "Región de Aysén del General Carlos Ibáñez del Campo",
+    "pais": null
+  }
+},
+{
+  "model": "arriendo_app.region",
+  "pk": 16,
+  "fields": {
+    "nombre": "Región de Magallanes y de la Antártica Chilena",
+    "pais": 1
+  }
+}
+]

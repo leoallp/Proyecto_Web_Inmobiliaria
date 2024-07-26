@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="w-100" style="max-width: 1000px;">
+        <h2 class="text-center mb-4">Mis Inmuebles</h2>
+        <div class="mb-3 text-end">
+            <a href="{% url 'crear_inmueble' %}" class="btn btn-success">Agregar Nuevo Inmueble</a>
+        </div>
+        {% for inmueble in inmuebles %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ inmueble.nombre }}</h5>
+                <p class="card-text">{{ inmueble.descripcion }}</p>
+                <p class="card-text"><strong>Precio Mensual:</strong> {{ inmueble.precio_mensual }}</p>
+                <p class="card-text"><strong>Dirección:</strong> {{ inmueble.direccion }}</p>
+                <div class="d-flex justify-content-between">
+                    <a href="{% url 'editar_inmueble' inmueble.id %}" class="btn btn-primary">Editar</a>
+                    <form method="POST" class="d-inline" action="{% url 'vista_arrendador' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="inmueble_id" value="{{ inmueble.id }}">
+                        <button type="submit" name="delete" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="alert alert-info text-center" role="alert">
+            No has agregado ningún inmueble.
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

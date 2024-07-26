@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+{% load static%}
+{% block content %}
+<div class="container mt-5">
+    <h2>Inmuebles Disponibles</h2>
+    <div class="row">
+        {% for inmueble in inmuebles %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'img/casa.jpg' %}" class="card-img-top" alt="Imagen genérica">
+                <div class="card-body">
+                    <h5 class="card-title">{{ inmueble.nombre }}</h5>
+                    <p class="card-text">{{ inmueble.descripcion }}</p>
+                    <p class="card-text">Precio Mensual: {{ inmueble.precio_mensual }}</p>
+                    <p class="card-text">Dirección: {{ inmueble.direccion }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
