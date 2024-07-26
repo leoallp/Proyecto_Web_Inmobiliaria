@@ -1,2 +1,2 @@
 # Proyecto_Web_Inmobiliaria
-HITO YA TERMINADOS
+HITOS YA TERMINADOS
