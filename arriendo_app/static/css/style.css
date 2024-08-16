@@ -1,5 +1,5 @@
 .card-img-custom {
-    height: 200px; /* Establece una altura fija para las imágenes */
+    height: 320px; /* Establece una altura fija para las imágenes */
     object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor sin deformarla */
 }
 
@@ -11,4 +11,33 @@
 
 .card-body {
     flex: 1; /* Permite que el cuerpo de la tarjeta ocupe el espacio disponible */
+}
+
+
+
+form label {
+    display: block; /* labels en bloques debajo de su texto correspondiente */
+    
+}
+
+
+
+/* Oculta los textos de ayuda genéricos */
+.helptext {
+    display: none;
+}
+
+form ul {
+    padding-left: 1em;
+    font-size: 10px;
+}
+
+/* le da estilo a las alertas error */
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+form input {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
 }

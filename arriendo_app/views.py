@@ -5,11 +5,35 @@ from django.contrib.auth import login
 from .forms import *
 import json
 from django.http import JsonResponse
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
+from django.contrib.auth.forms import AuthenticationForm
 
-# Create your views here.
+# Funciones para verificar el tipo de usuario
+def es_arrendador(user):
+    return user.usuario.tipo_usuario.nombre == 'Arrendador'
+
+def es_arrendatario(user):
+    return user.usuario.tipo_usuario.nombre == 'Arrendatario'
+
+# vista formulario inicio de sesion
+def inicio_sesion(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            messages.success(request, 'Inicio de sesión exitoso. ¡Bienvenido!')
+            return redirect('bienvenido')
+        else:
+            messages.error(request, 'Usuario o contraseña incorrectos.')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'registration/login.html', {'form': form})
+
+#vista para editar los inmuebles del arrendador
 @login_required
+@user_passes_test(es_arrendador)  #comprueba que el tipo de usuario sea arrendador
 def editar_inmueble(request, inmueble_id):
     nombre_usuario = request.user.get_username()
     inmueble = get_object_or_404(Inmueble, id=inmueble_id)
@@ -17,9 +41,9 @@ def editar_inmueble(request, inmueble_id):
     if request.method == 'POST':
         form = InmuebleForm(request.POST, instance=inmueble)
         if form.is_valid():
-            form.save()
+            form.save() # Guarda los datos del formulario
             messages.success(request, 'Inmueble actualizado correctamente.')
-            return redirect('vista_arrendador')  # Redirige a la vista del arrendador o donde desees
+            return redirect('mis_inmuebles')  
     else:
         form = InmuebleForm(instance=inmueble)
 
@@ -32,6 +56,7 @@ def user_data_complete(user):
     except Usuario.DoesNotExist:
         return False
 
+#obliga al usuario a completar todo el formulario de registro
 def user_data_required(view_func):
     @login_required
     def _wrapped_view(request, *args, **kwargs):
@@ -41,15 +66,19 @@ def user_data_required(view_func):
         return view_func(request, *args, **kwargs)
     return _wrapped_view
 
+#vista arrendatario con selector multiple de busqueda
 @login_required
-def vista_arrendatario(request):
+@user_passes_test(es_arrendatario)
+def buscar_propiedad(request):
     nombre_usuario = request.user.get_username()
     tipos_inmuebles = TipoInmueble.objects.all()
     regiones = Region.objects.all()
     comunas = Comuna.objects.all()
-    return render(request, 'vista_arrendatario.html', {'tipos_inmuebles': tipos_inmuebles, 'regiones': regiones, 'comunas': comunas,  'nombre_usuario': nombre_usuario})
+    return render(request, 'buscar_propiedad.html', {'tipos_inmuebles': tipos_inmuebles, 'regiones': regiones, 'comunas': comunas,  'nombre_usuario': nombre_usuario})
 
+#vista arrendatario inmubles disponibles tras la busqueda
 @login_required
+@user_passes_test(es_arrendatario)
 def inmuebles_disponibles(request):
     nombre_usuario = request.user.get_username()
     if request.method == 'POST':
@@ -70,8 +99,10 @@ def inmuebles_disponibles(request):
     else:
         return render(request, 'inmuebles_disponibles.html', {'inmuebles': [], "nombre_usuario": nombre_usuario})
 
+#lista de inmuebles creados
 @login_required
-def vista_arrendador(request):
+@user_passes_test(es_arrendador)
+def mis_inmuebles(request):
     nombre_usuario = request.user.get_username()
     usuario = request.user.usuario
     inmuebles = Inmueble.objects.filter(usuarios=usuario)  # Filtra los inmuebles por el usuario actual
@@ -83,20 +114,21 @@ def vista_arrendador(request):
         if 'update' in request.POST:
             form = InmuebleForm(request.POST, instance=inmueble)
             if form.is_valid():
-                form.save()
+                form.save() # Guarda los datos del formulario
                 messages.success(request, 'Inmueble actualizado correctamente')
-                return redirect('vista_arrendador')
+                return redirect('mis_inmuebles')
         elif 'delete' in request.POST:
             inmueble.delete()
             messages.success(request, 'Inmueble eliminado correctamente')
-            return redirect('vista_arrendador')
+            return redirect('mis_inmuebles')
     else:
         form = InmuebleForm()
 
-    return render(request, 'vista_arrendador.html', {'inmuebles': inmuebles, 'form': form, "nombre_usuario": nombre_usuario})
+    return render(request, 'mis_inmuebles.html', {'inmuebles': inmuebles, 'form': form, "nombre_usuario": nombre_usuario})
 
-
+#formulario para crear inmueble
 @login_required
+@user_passes_test(es_arrendador)
 def crear_inmueble(request):
     nombre_usuario = request.user.get_username()
     
@@ -112,6 +144,7 @@ def crear_inmueble(request):
         form = InmuebleForm()
     return render(request, 'crear_inmueble.html', {'form': form, "nombre_usuario": nombre_usuario})
 
+#select multiple usado en vista buscar_propiedades
 def filtrar_comunas(request):
     try:
         if request.method == "POST":
@@ -132,7 +165,7 @@ def filtrar_comunas(request):
         print("** Exception **", str(e))
         return JsonResponse({'error': str(e)}, status=400)
     
-    
+#bienvenido    
 @login_required
 def bienvenido(request):
     titulo_pag = "Bienvenido"
@@ -146,48 +179,38 @@ def bienvenido(request):
     return render(request,'bienvenido.html', context)            
     
 
+#formulario para actualizar datos
 @login_required
 def actualizar_datos(request):
-    nombre_usuario = request.user.get_username()
-    try:
-        usuario = request.user.usuario
-    except Usuario.DoesNotExist:
-        usuario = Usuario(user=request.user)
-
+    nombre_usuario = request.user.get_username()  
+    usuario, created = Usuario.objects.get_or_create(user=request.user)  # Obtiene o crea un objeto Usuario asociado al usuario actual
     if request.method == 'POST':
-        form = ActualizarDatosForm(request.POST, instance=usuario, user=request.user)
+        # Si el método de la solicitud es POST, se procesan los datos del formulario
+        form = ActualizarDatosForm(request.POST, instance=usuario, user=request.user)  # Crea una instancia del formulario con los datos POST y el usuario
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Datos actualizados correctamente')
-            return redirect('bienvenido')
+            form.save()  
+            messages.success(request, 'Datos actualizados correctamente')  
+            return redirect('bienvenido') 
     else:
-        form = ActualizarDatosForm(instance=usuario, user=request.user)
-
+        # Si el método de la solicitud no es POST, se crea un formulario vacío
+        form = ActualizarDatosForm(instance=usuario, user=request.user)  # Crea una instancia del formulario con el objeto Usuario
     context = {
-        "nombre_usuario": nombre_usuario,
-        'form': form,
-        'tipousuario': TipoUsuario.objects.all()
+        "nombre_usuario": nombre_usuario,  
+        'form': form,  
+        'tipousuario': TipoUsuario.objects.all()  # Pasa todos los objetos TipoUsuario al contexto
     }
-    return render(request, 'actualizar_datos.html', context)    
+    return render(request, 'actualizar_datos.html', context)  
 
+#home
 def index(request):
     nombre_usuario = request.user.get_username()
-    regiones = Region.objects.all()
-    comunas = Comuna.objects.all()
-    inmuebles = Inmueble.objects.all()
-    tipos_inmuebles= TipoInmueble.objects.all()
     context = {
         "nombre_usuario": nombre_usuario,
-        'regiones' : regiones,
-        'comunas' : comunas,
-        'inmuebles' : inmuebles,
-        'tipos_inmuebles' : tipos_inmuebles,
     }
     return render(request,"index.html", context)
 
-
+#formulario de registro
 def registro(request):
-    
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():

@@ -1,0 +1,1481 @@
+[
+    {
+        "model": "arriendo_app.pais",
+        "pk": 1,
+        "fields": {
+            "nombre": "Chile"
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 1,
+        "fields": {
+            "nombre": "Arica y Parinacota",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 1,
+        "fields": {
+            "nombre": "Arica",
+            "region": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 2,
+        "fields": {
+            "nombre": "Camarones",
+            "region": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 3,
+        "fields": {
+            "nombre": "General Lagos",
+            "region": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 4,
+        "fields": {
+            "nombre": "Putre",
+            "region": 1
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 2,
+        "fields": {
+            "nombre": "Tarapacá",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 5,
+        "fields": {
+            "nombre": "Alto Hospicio",
+            "region": 2
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 6,
+        "fields": {
+            "nombre": "Camiña",
+            "region": 2
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 7,
+        "fields": {
+            "nombre": "Colchane",
+            "region": 2
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 8,
+        "fields": {
+            "nombre": "Huara",
+            "region": 2
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 9,
+        "fields": {
+            "nombre": "Iquique",
+            "region": 2
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 10,
+        "fields": {
+            "nombre": "Pica",
+            "region": 2
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 11,
+        "fields": {
+            "nombre": "Pozo Almonte",
+            "region": 2
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 3,
+        "fields": {
+            "nombre": "Antofagasta",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 12,
+        "fields": {
+            "nombre": "Antofagasta",
+            "region": 3
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 13,
+        "fields": {
+            "nombre": "Calama",
+            "region": 3
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 14,
+        "fields": {
+            "nombre": "María Elena",
+            "region": 3
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 15,
+        "fields": {
+            "nombre": "Mejillones",
+            "region": 3
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 16,
+        "fields": {
+            "nombre": "Ollagüe",
+            "region": 3
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 17,
+        "fields": {
+            "nombre": "San Pedro de Atacama",
+            "region": 3
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 18,
+        "fields": {
+            "nombre": "Sierra Gorda",
+            "region": 3
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 19,
+        "fields": {
+            "nombre": "Taltal",
+            "region": 3
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 20,
+        "fields": {
+            "nombre": "Tocopilla",
+            "region": 3
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 4,
+        "fields": {
+            "nombre": "Atacama",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 21,
+        "fields": {
+            "nombre": "Alto del Carmen",
+            "region": 4
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 22,
+        "fields": {
+            "nombre": "Caldera",
+            "region": 4
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 23,
+        "fields": {
+            "nombre": "Chañaral",
+            "region": 4
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 24,
+        "fields": {
+            "nombre": "Copiapó",
+            "region": 4
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 25,
+        "fields": {
+            "nombre": "Diego de Almagro",
+            "region": 4
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 26,
+        "fields": {
+            "nombre": "Freirina",
+            "region": 4
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 27,
+        "fields": {
+            "nombre": "Huasco",
+            "region": 4
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 28,
+        "fields": {
+            "nombre": "Tierra Amarilla",
+            "region": 4
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 29,
+        "fields": {
+            "nombre": "Vallenar",
+            "region": 4
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 5,
+        "fields": {
+            "nombre": "Coquimbo",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 30,
+        "fields": {
+            "nombre": "Andacollo",
+            "region": 5
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 31,
+        "fields": {
+            "nombre": "Canela",
+            "region": 5
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 32,
+        "fields": {
+            "nombre": "Combarbalá",
+            "region": 5
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 33,
+        "fields": {
+            "nombre": "Coquimbo",
+            "region": 5
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 34,
+        "fields": {
+            "nombre": "Illapel",
+            "region": 5
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 35,
+        "fields": {
+            "nombre": "La Higuera",
+            "region": 5
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 36,
+        "fields": {
+            "nombre": "La Serena",
+            "region": 5
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 37,
+        "fields": {
+            "nombre": "Los Vilos",
+            "region": 5
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 38,
+        "fields": {
+            "nombre": "Monte Patria",
+            "region": 5
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 39,
+        "fields": {
+            "nombre": "Ovalle",
+            "region": 5
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 40,
+        "fields": {
+            "nombre": "Paiguano",
+            "region": 5
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 41,
+        "fields": {
+            "nombre": "Punitaqui",
+            "region": 5
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 6,
+        "fields": {
+            "nombre": "Valparaíso",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 42,
+        "fields": {
+            "nombre": "Algarrobo",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 43,
+        "fields": {
+            "nombre": "Cabildo",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 44,
+        "fields": {
+            "nombre": "Calera",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 45,
+        "fields": {
+            "nombre": "Concón",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 46,
+        "fields": {
+            "nombre": "El Quisco",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 47,
+        "fields": {
+            "nombre": "El Tabo",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 48,
+        "fields": {
+            "nombre": "Hijuelas",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 49,
+        "fields": {
+            "nombre": "La Calera",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 50,
+        "fields": {
+            "nombre": "La Ligua",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 51,
+        "fields": {
+            "nombre": "La Paz",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 52,
+        "fields": {
+            "nombre": "Limache",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 53,
+        "fields": {
+            "nombre": "Nogales",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 54,
+        "fields": {
+            "nombre": "Olmué",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 55,
+        "fields": {
+            "nombre": "Papudo",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 56,
+        "fields": {
+            "nombre": "Petorca",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 57,
+        "fields": {
+            "nombre": "Quillota",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 58,
+        "fields": {
+            "nombre": "Quilpué",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 59,
+        "fields": {
+            "nombre": "Reñaca",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 60,
+        "fields": {
+            "nombre": "San Antonio",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 61,
+        "fields": {
+            "nombre": "San Felipe",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 62,
+        "fields": {
+            "nombre": "San Esteban",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 63,
+        "fields": {
+            "nombre": "Valparaíso",
+            "region": 6
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 7,
+        "fields": {
+            "nombre": "O'Higgins",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 64,
+        "fields": {
+            "nombre": "Chépica",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 65,
+        "fields": {
+            "nombre": "Codegua",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 66,
+        "fields": {
+            "nombre": "Coinco",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 67,
+        "fields": {
+            "nombre": "Coltauco",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 68,
+        "fields": {
+            "nombre": "Doñihue",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 69,
+        "fields": {
+            "nombre": "Graneros",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 70,
+        "fields": {
+            "nombre": "Las Cabras",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 71,
+        "fields": {
+            "nombre": "Machalí",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 72,
+        "fields": {
+            "nombre": "Malloa",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 73,
+        "fields": {
+            "nombre": "Olivar",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 74,
+        "fields": {
+            "nombre": "Peumo",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 75,
+        "fields": {
+            "nombre": "Pichidegua",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 76,
+        "fields": {
+            "nombre": "Placilla",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 77,
+        "fields": {
+            "nombre": "Rancagua",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 78,
+        "fields": {
+            "nombre": "Rengo",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 79,
+        "fields": {
+            "nombre": "Requínoa",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 80,
+        "fields": {
+            "nombre": "San Fernando",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 81,
+        "fields": {
+            "nombre": "San Vicente de Tagua Tagua",
+            "region": 7
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 8,
+        "fields": {
+            "nombre": "Maule",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 82,
+        "fields": {
+            "nombre": "Cauquenes",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 83,
+        "fields": {
+            "nombre": "Chanco",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 84,
+        "fields": {
+            "nombre": "Colbún",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 85,
+        "fields": {
+            "nombre": "Constitución",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 86,
+        "fields": {
+            "nombre": "Curicó",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 87,
+        "fields": {
+            "nombre": "Hualañé",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 88,
+        "fields": {
+            "nombre": "Hualqui",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 89,
+        "fields": {
+            "nombre": "Licantén",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 90,
+        "fields": {
+            "nombre": "Linares",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 91,
+        "fields": {
+            "nombre": "Longaví",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 92,
+        "fields": {
+            "nombre": "Maule",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 93,
+        "fields": {
+            "nombre": "Rauco",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 94,
+        "fields": {
+            "nombre": "Retiro",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 95,
+        "fields": {
+            "nombre": "San Clemente",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 96,
+        "fields": {
+            "nombre": "San Javier",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 97,
+        "fields": {
+            "nombre": "San Rafael",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 98,
+        "fields": {
+            "nombre": "Talca",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 99,
+        "fields": {
+            "nombre": "Villa Alegre",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 100,
+        "fields": {
+            "nombre": "Villa Alegre",
+            "region": 8
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 9,
+        "fields": {
+            "nombre": "Ñuble",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 101,
+        "fields": {
+            "nombre": "Bulnes",
+            "region": 9
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 102,
+        "fields": {
+            "nombre": "Chillán",
+            "region": 9
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 103,
+        "fields": {
+            "nombre": "Chillán Viejo",
+            "region": 9
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 104,
+        "fields": {
+            "nombre": "El Carmen",
+            "region": 9
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 105,
+        "fields": {
+            "nombre": "Ninhue",
+            "region": 9
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 106,
+        "fields": {
+            "nombre": "Pinto",
+            "region": 9
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 107,
+        "fields": {
+            "nombre": "Quirihue",
+            "region": 9
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 108,
+        "fields": {
+            "nombre": "San Carlos",
+            "region": 9
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 109,
+        "fields": {
+            "nombre": "San Fabián",
+            "region": 9
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 110,
+        "fields": {
+            "nombre": "San Ignacio",
+            "region": 9
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 111,
+        "fields": {
+            "nombre": "San Nicolás",
+            "region": 9
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 10,
+        "fields": {
+            "nombre": "Biobío",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 112,
+        "fields": {
+            "nombre": "Arauco",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 113,
+        "fields": {
+            "nombre": "Chiguayante",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 114,
+        "fields": {
+            "nombre": "Concepción",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 115,
+        "fields": {
+            "nombre": "Coronel",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 116,
+        "fields": {
+            "nombre": "Hualpén",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 117,
+        "fields": {
+            "nombre": "Hualqui",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 118,
+        "fields": {
+            "nombre": "Laja",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 119,
+        "fields": {
+            "nombre": "Los Álamos",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 120,
+        "fields": {
+            "nombre": "Los Ángeles",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 121,
+        "fields": {
+            "nombre": "Nacimiento",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 122,
+        "fields": {
+            "nombre": "Penco",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 123,
+        "fields": {
+            "nombre": "San Pedro de la Paz",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 124,
+        "fields": {
+            "nombre": "Santa Juana",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 125,
+        "fields": {
+            "nombre": "Talcahuano",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 126,
+        "fields": {
+            "nombre": "Tomé",
+            "region": 10
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 11,
+        "fields": {
+            "nombre": "La Araucanía",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 127,
+        "fields": {
+            "nombre": "Angol",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 128,
+        "fields": {
+            "nombre": "Cañete",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 129,
+        "fields": {
+            "nombre": "Carahue",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 130,
+        "fields": {
+            "nombre": "Collipulli",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 131,
+        "fields": {
+            "nombre": "Curacautín",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 132,
+        "fields": {
+            "nombre": "Curarrehue",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 133,
+        "fields": {
+            "nombre": "Ercilla",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 134,
+        "fields": {
+            "nombre": "Freire",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 135,
+        "fields": {
+            "nombre": "Galvarino",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 136,
+        "fields": {
+            "nombre": "Lautaro",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 137,
+        "fields": {
+            "nombre": "Loncoche",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 138,
+        "fields": {
+            "nombre": "Los Sauces",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 139,
+        "fields": {
+            "nombre": "Lumaco",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 140,
+        "fields": {
+            "nombre": "Melipeuco",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 141,
+        "fields": {
+            "nombre": "Nueva Imperial",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 142,
+        "fields": {
+            "nombre": "Padre Las Casas",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 143,
+        "fields": {
+            "nombre": "Pucón",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 144,
+        "fields": {
+            "nombre": "Temuco",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 145,
+        "fields": {
+            "nombre": "Vilcún",
+            "region": 11
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 12,
+        "fields": {
+            "nombre": "Los Ríos",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 146,
+        "fields": {
+            "nombre": "Lago Ranco",
+            "region": 12
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 147,
+        "fields": {
+            "nombre": "La Unión",
+            "region": 12
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 148,
+        "fields": {
+            "nombre": "Los Lagos",
+            "region": 12
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 149,
+        "fields": {
+            "nombre": "Paillaco",
+            "region": 12
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 150,
+        "fields": {
+            "nombre": "Panguipulli",
+            "region": 12
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 13,
+        "fields": {
+            "nombre": "Los Lagos",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 151,
+        "fields": {
+            "nombre": "Ancud",
+            "region": 13
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 152,
+        "fields": {
+            "nombre": "Castro",
+            "region": 13
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 153,
+        "fields": {
+            "nombre": "Chonchi",
+            "region": 13
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 154,
+        "fields": {
+            "nombre": "Curaco de Vélez",
+            "region": 13
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 155,
+        "fields": {
+            "nombre": "Dalcahue",
+            "region": 13
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 156,
+        "fields": {
+            "nombre": "Hualaihué",
+            "region": 13
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 157,
+        "fields": {
+            "nombre": "Queilén",
+            "region": 13
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 158,
+        "fields": {
+            "nombre": "Quellón",
+            "region": 13
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 159,
+        "fields": {
+            "nombre": "Quinchao",
+            "region": 13
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 14,
+        "fields": {
+            "nombre": "Aysén",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 160,
+        "fields": {
+            "nombre": "Aysén",
+            "region": 14
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 161,
+        "fields": {
+            "nombre": "Cochrane",
+            "region": 14
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 162,
+        "fields": {
+            "nombre": "Coyhaique",
+            "region": 14
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 163,
+        "fields": {
+            "nombre": "Chile Chico",
+            "region": 14
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 164,
+        "fields": {
+            "nombre": "O'Higgins",
+            "region": 14
+        }
+    },
+    {
+        "model": "arriendo_app.region",
+        "pk": 15,
+        "fields": {
+            "nombre": "Magallanes",
+            "pais": 1
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 165,
+        "fields": {
+            "nombre": "Antártica Chilena",
+            "region": 15
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 166,
+        "fields": {
+            "nombre": "Cabo de Hornos",
+            "region": 15
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 167,
+        "fields": {
+            "nombre": "Laguna Blanca",
+            "region": 15
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 168,
+        "fields": {
+            "nombre": "Natales",
+            "region": 15
+        }
+    },
+    {
+        "model": "arriendo_app.comuna",
+        "pk": 169,
+        "fields": {
+            "nombre": "Punta Arenas",
+            "region": 15
+        }
+    }
+]

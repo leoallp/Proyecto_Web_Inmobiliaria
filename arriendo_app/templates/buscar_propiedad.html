@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5 pb-4 text-center" >
+    <div class="row justify-content-center">     
+        <div class="col-12">   
+
+            <form action="{% url 'inmuebles_disponibles' %}" method="POST" >
+                {% csrf_token %}
+                <div class="row ">
+                    <div class="col-lg-3 col-md-12 ">
+                        <label for="tipos de inmuebles">Tipo de inmueble</label>
+                        <select class="form-select" aria-label="Default select example" name="tipo_inmueble" id="id_tipo_inmueble">
+                            <option selected>Seleccione</option>
+                            {% for tipo in tipos_inmuebles %}
+                            <option value="{{ tipo.id }}">{{ tipo.nombre }}</option>
+
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12">
+                        <label for="regiones">Regiones</label>
+                        <select class="form-select" aria-label="Default select example" name="regiones" id="id_region" onchange="filtrarComunas(this.value)">
+                            <option selected value="">Seleccione</option>
+                            {% for region in regiones %}
+                            <option value="{{ region.id }}">{{ region.nombre }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-12">
+                        <label for="comunas">Comunas</label>
+                        <select class="form-select" aria-label="Default select example" name="comunas" id="id_comuna">
+                            <option selected>Seleccione</option>
+                            {% for comuna in comunas %}
+                            <option value="{{ comuna.id }}">{{ comuna.nombre }}</option>
+
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-12 mt-4">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+

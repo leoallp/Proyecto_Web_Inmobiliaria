@@ -1,30 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container mt-4">
-    <h1>Bienvenido a Nuestro Servicio de Arriendo de Propiedades</h1>
+
+<div class="container col-8 mt-4 text-center">
+    <h1 class="my-5">¡Bienvenido {{nombre_usuario|capfirst}}!</h1>
+
+    <h3>¡Actualiza Tus Datos!</h3>
     <p>
-        En nuestra plataforma, facilitamos la conexión entre arrendadores y arrendatarios, ofreciendo una solución integral para todas tus necesidades de arrendamiento. Ya sea que estés buscando un nuevo hogar o que quieras poner en arriendo una propiedad, estamos aquí para ayudarte en cada paso del camino.
-    </p>
-    <h2>Para Arrendadores</h2>
-    <p>
-        Si eres un arrendador, nuestra plataforma te permite publicar tus propiedades de forma rápida y sencilla. Podrás gestionar tus anuncios, editar los detalles de las propiedades y actualizar la disponibilidad en tiempo real. Nuestro objetivo es maximizar la visibilidad de tu propiedad para que encuentres el arrendatario ideal en el menor tiempo posible.
-    </p>
-    <h2>Para Arrendatarios</h2>
-    <p>
-        Como arrendatario, tendrás acceso a una amplia variedad de propiedades disponibles para arriendo. Utiliza nuestras herramientas de búsqueda para filtrar propiedades por tipo, ubicación y precio, y encuentra la opción que mejor se adapte a tus necesidades y preferencias. Cada listado incluye fotos detalladas, descripciones precisas y toda la información que necesitas para tomar una decisión informada.
-    </p>
-    <h2>Beneficios de Nuestra Plataforma</h2>
-    <ul>
-        <li>Interfaz amigable y fácil de usar.</li>
-        <li>Publicación y gestión de anuncios sin complicaciones.</li>
-        <li>Acceso a una amplia gama de propiedades disponibles para arriendo.</li>
-        <li>Herramientas de búsqueda avanzadas para encontrar la propiedad perfecta.</li>
-        <li>Soporte al cliente disponible para asistirte en todo momento.</li>
-    </ul>
-    <h2>¡Actualiza Tus Datos!</h2>
-    <p>
-        Para acceder a todas las funciones disponibles como arrendatario o arrendador, es necesario que actualices tus datos. Esto nos permite brindarte un servicio personalizado y asegurarnos de que tengas la mejor experiencia posible en nuestra plataforma.
+        Para acceder a todas las funciones disponibles como arrendatario o arrendador, es necesario que actualices tus datos.
     </p>
     <div class="text-center my-4">
         <a class="btn btn-primary" href="{% url 'actualizar_datos' %}">Actualizar Datos</a>

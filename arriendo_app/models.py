@@ -10,13 +10,17 @@ class TipoUsuario(models.Model):
         return  f"{self.nombre} - {self.descripcion}"
     
 class Usuario(models.Model):
-    user = models.OneToOneField(User, on_delete= models.CASCADE, null=False) #de User ya heredan, nombre, apellido y correo
-    rut = models.CharField(max_length=10, primary_key=True)
+    
+    user = models.OneToOneField(User, on_delete= models.CASCADE, null=False) #de User ya heredan nombre, password y correo
+    tipo_usuario = models.ForeignKey(TipoUsuario,null= True, on_delete= models.CASCADE )#FK uno a muchos
+    rut = models.CharField(max_length=10,null=False, unique=True)
     direccion = models.CharField(max_length=255, null=False, blank=False)  
     telefono = models.CharField(max_length=50, null=False, blank=False)
-    tipo_usuario = models.ForeignKey(TipoUsuario,null= False, blank= False, on_delete= models.CASCADE )#FK uno a muchos
+
     def __str__(self) -> str:
         return f"{self.user.first_name} - {self.user.last_name} "
+    
+    
     
 class Pais(models.Model):
     nombre = models.CharField(max_length=100, null=False, blank=False)
@@ -43,6 +47,7 @@ class TipoInmueble(models.Model):       #pueden ser inmuebles como estacionamien
         return self.nombre
     
 class Inmueble(models.Model):
+    
     disponibilidad = models.BooleanField(default=False)
     nombre = models.CharField(max_length=50, null=False, blank=False)
     descripcion = models.TextField()

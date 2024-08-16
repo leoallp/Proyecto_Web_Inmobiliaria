@@ -9,51 +9,89 @@
         Encuentra tu próximo hogar o pon en arriendo tu propiedad con nosotros.
     </p>
     
-    <div class="d-flex justify-content-center">
-        <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel" style="max-height: 600px; max-width: 800px; overflow: hidden;">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div class="container">
+        <div class="row">
+            <!-- Carousel a la derecha para pantallas grandes, arriba en pantallas pequeñas -->
+            <div class="col-12 col-lg-6 order-1 order-lg-2 d-flex justify-content-center">
+                <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel" style="max-height: 600px; max-width: 800px; overflow: hidden;">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'img/casa.jpg' %}" class="d-block w-100" alt="Casa hermosa">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Casas Hermosas</h5>
+                                <p>Encuentra las mejores casas para arrendar en tu ciudad.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'img/depto.jpg' %}" class="d-block w-100" alt="Departamento moderno">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Departamentos Modernos</h5>
+                                <p>Explora una variedad de departamentos disponibles para ti.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'img/terreno.jpg' %}" class="d-block w-100" alt="Terrenos amplios">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Terrenos Amplios</h5>
+                                <p>Descubre terrenos ideales para tus proyectos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{% static 'img/casa1.jpg' %}" class="d-block w-100" alt="Casa hermosa">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Casas Hermosas</h5>
-                        <p>Encuentra las mejores casas para arrendar en tu ciudad.</p>
-                    </div>
+    
+            <!-- Texto a la izquierda para pantallas grandes, centrado y abajo en pantallas pequeñas -->
+            <div class="col-12 col-lg-6 order-2 order-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start">
+                <div class="text-center text-lg-start mt-5">
+
+                <h4>Para Arrendadores</h4>
+                <p style="font-size: 18px">
+                    Nuestra plataforma te permite publicar tus propiedades de forma rápida y sencilla. Podrás gestionar tus anuncios, editar los detalles de las propiedades y actualizar la disponibilidad en tiempo real.
+                </p>
+                <h4>Para Arrendatarios</h4>
+                <p style="font-size: 18px">
+                    Podrás Utilizar nuestra herramientas de búsqueda para filtrar propiedades por tipo, región y comuna, y encuentra la opción que mejor se adapte a tus necesidades y preferencias.
+                </p>
+                <h4>Beneficios de Nuestra Plataforma</h4>
+                <div style="display: inline-block; text-align: left;">
+                <ul class="ps-3" style="font-size: 18px">
+                    <li>Interfaz amigable y fácil de usar.</li>
+                    <li>Publicación y gestión de anuncios sin complicaciones.</li>
+                    <li>Amplia gama de propiedades disponibles para arriendo.</li>
+                    <li>Herramienta de búsqueda para encontrar la propiedad perfecta.</li>
+                </ul>
                 </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/depto.jpg' %}" class="d-block w-100" alt="Departamento moderno">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Departamentos Modernos</h5>
-                        <p>Explora una variedad de departamentos disponibles para ti.</p>
+                
+                {% if not user.is_authenticated %}
+                    <div class="text-center my-2">
+                        <a class="btn btn-primary" href="{% url 'registro' %}">Registrarse</a>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="{% static 'img/terreno.jpg' %}" class="d-block w-100" alt="Terrenos amplios">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Terrenos Amplios</h5>
-                        <p>Descubre terrenos ideales para tus proyectos.</p>
-                    </div>
-                </div>
+                {% endif %}
+                
+            </div> 
+
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </div>
+    
     
     <div class="row mt-5">
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card">
-                <img src="{% static 'img/casa1.jpg' %}" class="card-img-top card-img-custom" alt="Casa">
+                <img src="{% static 'img/casa.jpg' %}" class="card-img-top card-img-custom" alt="Casa">
                 <div class="card-body">
                     <h5 class="card-title">Casas</h5>
                     <p class="card-text">Encuentra una variedad de casas para arrendar en diferentes ubicaciones.</p>

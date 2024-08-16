@@ -23,13 +23,15 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('actualizar_datos/', views.actualizar_datos, name='actualizar_datos'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/login', views.inicio_sesion, name ='inicio_sesion'),
+    
     path('registro/', views.registro, name='registro'),
     path('', views.index, name='index'),
     path('filtrar-comunas/', views.filtrar_comunas, name='filtrar_comunas'),
     path('bienvenido/', views.bienvenido, name='bienvenido'),
     path('crear_inmueble/', views.crear_inmueble, name='crear_inmueble'),
-    path('vista_arrendador/', views.vista_arrendador, name='vista_arrendador'),
-    path('vista_arrendatario/', views.vista_arrendatario, name='vista_arrendatario'),
+    path('mis_inmuebles/', views.mis_inmuebles, name='mis_inmuebles'),
+    path('buscar_propiedad/', views.buscar_propiedad, name='buscar_propiedad'),
     path('inmuebles_disponibles/', views.inmuebles_disponibles, name='inmuebles_disponibles'),
     path('editar_inmueble/<int:inmueble_id>/', views.editar_inmueble, name='editar_inmueble'),
 

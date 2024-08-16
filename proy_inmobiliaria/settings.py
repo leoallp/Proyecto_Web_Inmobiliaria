@@ -84,7 +84,7 @@ DATABASES = {
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "proy_inmobiliaria",
+        "NAME": "inmobiliaria",
         "USER": "postgres",
         "PASSWORD": "Admin1234",
         "HOST": "127.0.0.1",
@@ -114,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "es"
 
 TIME_ZONE = "UTC"
 

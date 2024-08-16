@@ -2,122 +2,17 @@
 
 {% block content %}
 
-<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-    <div class="w-100" style="max-width: 600px;">
-        <h2 class="text-center mb-4">Agregar Inmueble</h2>
-        <form method="POST">
-            {% csrf_token %}
-            <div class="mb-3">
-                <label for="{{ form.nombre.id_for_label }}" class="form-label">Nombre del Inmueble</label>
-                <input type="text" name="nombre" id="{{ form.nombre.id_for_label }}" class="form-control" value="{{ form.nombre.value|default:'' }}">
-                {% for error in form.nombre.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="mb-3">
-                <label for="{{ form.descripcion.id_for_label }}" class="form-label">Descripción</label>
-                <textarea name="descripcion" id="{{ form.descripcion.id_for_label }}" class="form-control">{{ form.descripcion.value|default:'' }}</textarea>
-                {% for error in form.descripcion.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="mb-3">
-                <label for="{{ form.m2_construidos.id_for_label }}" class="form-label">M² Construidos</label>
-                <input type="number" name="m2_construidos" id="{{ form.m2_construidos.id_for_label }}" class="form-control" value="{{ form.m2_construidos.value|default:'' }}" step="0.01">
-                {% for error in form.m2_construidos.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="mb-3">
-                <label for="{{ form.m2_totales_o_del_terreno.id_for_label }}" class="form-label">M² Totales o del Terreno</label>
-                <input type="number" name="m2_totales_o_del_terreno" id="{{ form.m2_totales_o_del_terreno.id_for_label }}" class="form-control" value="{{ form.m2_totales_o_del_terreno.value|default:'' }}" step="0.01">
-                {% for error in form.m2_totales_o_del_terreno.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="mb-3">
-                <label for="{{ form.numero_de_estacionamientos.id_for_label }}" class="form-label">Número de Estacionamientos</label>
-                <input type="number" name="numero_de_estacionamientos" id="{{ form.numero_de_estacionamientos.id_for_label }}" class="form-control" value="{{ form.numero_de_estacionamientos.value|default:'' }}">
-                {% for error in form.numero_de_estacionamientos.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="mb-3">
-                <label for="{{ form.numero_de_habitaciones.id_for_label }}" class="form-label">Número de Habitaciones</label>
-                <input type="number" name="numero_de_habitaciones" id="{{ form.numero_de_habitaciones.id_for_label }}" class="form-control" value="{{ form.numero_de_habitaciones.value|default:'' }}">
-                {% for error in form.numero_de_habitaciones.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="mb-3">
-                <label for="{{ form.numero_de_banios.id_for_label }}" class="form-label">Número de Baños</label>
-                <input type="number" name="numero_de_banios" id="{{ form.numero_de_banios.id_for_label }}" class="form-control" value="{{ form.numero_de_banios.value|default:'' }}">
-                {% for error in form.numero_de_banios.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="mb-3">
-                <label for="{{ form.precio_mensual.id_for_label }}" class="form-label">Precio Mensual</label>
-                <input type="number" name="precio_mensual" id="{{ form.precio_mensual.id_for_label }}" class="form-control" value="{{ form.precio_mensual.value|default:'' }}" step="0.01">
-                {% for error in form.precio_mensual.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="mb-3">
-                <label for="{{ form.direccion.id_for_label }}" class="form-label">Dirección</label>
-                <input type="text" name="direccion" id="{{ form.direccion.id_for_label }}" class="form-control" value="{{ form.direccion.value|default:'' }}">
-                {% for error in form.direccion.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="mb-3">
-                <label for="{{ form.region.id_for_label }}" class="form-label">Región</label>
-                <select name="region" id="{{ form.region.id_for_label }}" class="form-select">
-                    <option value="" disabled selected>Seleccione</option>
-                    {% for choice in form.region.field.queryset %}
-                        <option value="{{ choice.pk }}" {% if choice.pk == form.region.value %}selected{% endif %}>{{ choice }}</option>
-                    {% endfor %}
-                </select>
-                {% for error in form.region.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="mb-3">
-                <label for="{{ form.comuna.id_for_label }}" class="form-label">Comuna</label>
-                <select name="comuna" id="{{ form.comuna.id_for_label }}" class="form-select">
-                    <option value="" disabled selected>Seleccione</option>
-                    {% for choice in form.comuna.field.queryset %}
-                        <option value="{{ choice.pk }}" {% if choice.pk == form.comuna.value %}selected{% endif %}>{{ choice }}</option>
-                    {% endfor %}
-                </select>
-                {% for error in form.comuna.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="mb-3">
-                <label for="{{ form.tipo_inmueble.id_for_label }}" class="form-label">Tipo de Inmueble</label>
-                <select name="tipo_inmueble" id="{{ form.tipo_inmueble.id_for_label }}" class="form-select">
-                    <option value="" disabled selected>Seleccione</option>
-                    {% for choice in form.tipo_inmueble.field.queryset %}
-                        <option value="{{ choice.pk }}" {% if choice.pk == form.tipo_inmueble.value %}selected{% endif %}>{{ choice }}</option>
-                    {% endfor %}
-                </select>
-                {% for error in form.tipo_inmueble.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" name="disponibilidad" id="{{ form.disponibilidad.id_for_label }}" class="form-check-input" {% if form.disponibilidad.value %}checked{% endif %}>
-                <label for="{{ form.disponibilidad.id_for_label }}" class="form-check-label">Disponible</label>
-                {% for error in form.disponibilidad.errors %}
-                    <div class="text-danger">{{ error }}</div>
-                {% endfor %}
-            </div>
-            <div class="my-3">
-                <button type="submit" class="btn btn-primary w-100">Crear</button>
+<h3 class="text-center my-4">¡Completa el formulario y publica!</h3>
+
+
+<div class="container text-center d-flex justify-content-center align-items-center">
+        <form class="form" method="POST" style="max-width: 400px;">
+        {% csrf_token %}
+        {{ form.as_p }}
+            <div class="mt-3 mb-4 text-center">
+                <button type="submit" class="btn btn-primary">Publicar</button>
             </div>
         </form>
-    </div>
 </div>
 
 {% endblock %}

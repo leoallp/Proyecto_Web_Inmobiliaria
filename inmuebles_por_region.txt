@@ -1,4 +1,0 @@
-Región: Región de La Araucanía
-  Nombre: casa 1
-  Descripción: excelente ubicación
-

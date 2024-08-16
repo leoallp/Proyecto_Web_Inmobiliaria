@@ -17,23 +17,24 @@
                 <li class="nav-item">
                     <a class="nav-link active text-light" aria-current="page" href="{% url 'bienvenido' %}">Bienvenido</a>
                 </li>
-                {% endif %}
-                {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link active text-light" aria-current="page" href="{% url 'actualizar_datos' %}">Actualizar Datos</a>
                 </li>
-                {% if user|user_data_complete_filter %}
+                
+                {% if user.usuario.tipo_usuario.nombre == 'Arrendador' %}
                 <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="{% url 'crear_inmueble' %}">Crear Inmueble</a>
+                    <a class="nav-link active text-light" aria-current="page" href="{% url 'crear_inmueble' %}">Publicar Inmueble</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="{% url 'vista_arrendador' %}">Vista Arrendador</a>
+                    <a class="nav-link active text-light" aria-current="page" href="{% url 'mis_inmuebles' %}">Mis Inmuebles</a>
                 </li>
+                {% elif user.usuario.tipo_usuario.nombre == 'Arrendatario' %}
                 <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="{% url 'vista_arrendatario' %}">Vista Arrendatario</a>
+                    <a class="nav-link active text-light" aria-current="page" href="{% url 'buscar_propiedad' %}">Buscar propiedad</a>
                 </li>
                 {% endif %}
                 {% endif %}
+                
                 {% if not user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link active text-light" aria-current="page" href="{% url 'registro' %}">Registro</a>
@@ -78,9 +79,9 @@
                             <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
                         </div>    
                     </form>
-                <div class="dropdown-divider"></div>
-                <div class="text-center">
-                    <a href="" class="link-primary">¿No tienes cuenta? Regístrate</a>
+                
+                <div class="text-center mt-3">
+                    <a href="{% url 'registro' %}" class="link-primary">¿No tienes cuenta? Regístrate</a>
                 </div>
                 
             </ul>

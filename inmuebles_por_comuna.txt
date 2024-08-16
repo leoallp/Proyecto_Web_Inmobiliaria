@@ -1,4 +1,0 @@
-Comuna: Vilcún
-  Nombre: casa 1
-  Descripción: excelente ubicación
-
