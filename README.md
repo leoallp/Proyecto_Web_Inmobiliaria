@@ -20,6 +20,7 @@ python consulta_inmuebles_por_region.py
   
 # Screenshots  
 <div align="center">  
+  
 Indice  
 ![Indice](screenshots/index.png)  
 Registro  
