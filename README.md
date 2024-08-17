@@ -19,6 +19,11 @@ python consulta_inmuebles_por_comuna.py
 python consulta_inmuebles_por_region.py  
   
 # Screenshots  
+<div align="center">  
+Indice  
 ![Indice](screenshots/index.png)  
+Registro  
+![registro](screenshots/registro.png)  
+</div>  
 
 
