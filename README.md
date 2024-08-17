@@ -29,7 +29,7 @@ Login y boton de login
 ![login](screenshots/login.png)  
 Bienvenido  
 ![bienvenido](screenshots/bienvenido.png)  
-Actualizar datos  
+Actualizar datos y tipo de usuario   
 ![actualizar_datos](screenshots/actualizar_datos.png)  
 Publicar un inmueble  
 ![publicar_inmueble](screenshots/publicar_inmueble.png)  
@@ -37,8 +37,8 @@ Mis inmuebles
 ![mis_inmuebles](screenshots/mis_inmuebles.png)  
 Buscar inmuebles  
 ![buscar_inmuebles](screenshots/buscar_inmuebles.png)  
-  Inmuebles disponibles  
-   ![inmuebles_disponibles](screenshots/inmuebles_disponibles.png)   
+Inmuebles disponibles  
+![inmuebles_disponibles](screenshots/inmuebles_disponibles.png)   
 </div>  
 
 
