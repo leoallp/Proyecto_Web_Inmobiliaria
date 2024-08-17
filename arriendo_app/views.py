@@ -139,7 +139,7 @@ def crear_inmueble(request):
             inmueble.save()
             inmueble.usuarios.add(request.user.usuario)  # Asocia el inmueble con el usuario actual
             messages.success(request, 'Inmueble agregado correctamente.')
-            return redirect('bienvenido')
+            return redirect('mis_inmuebles')
     else:
         form = InmuebleForm()
     return render(request, 'crear_inmueble.html', {'form': form, "nombre_usuario": nombre_usuario})
