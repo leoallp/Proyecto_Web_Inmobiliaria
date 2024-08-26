@@ -1,10 +1,13 @@
-# Proyecto_Web_Inmobiliaria  
-![Indice](screenshots/mobile.png)
-![Indice](screenshots/tt.png)  
-![Indice](screenshots/1.png)
+<div align="center">
+# "Inmobiliaria Ll"  
+
+  
+Aplicacion web de busqueda, publicacion y arriendo de inmuebles  
 
 
-# ******** Sugerencias de instalación ********
+![Indice](screenshots/0.png)  
+</div>
+# ******** Algunas sugerencias de instalación ********
 
 # Requirements
 Para instalar todos los paquetes listados en ev_inmobiliaria.txt usar:  
@@ -22,27 +25,22 @@ Los script de consulta de inmuebles por region y comuna son opcionales y van a d
 python consulta_inmuebles_por_comuna.py  
 python consulta_inmuebles_por_region.py  
   
-# Screenshots  
+# Algunos Screenshots  
 <div align="center">  
 
 Indice  
-![Indice](screenshots/index.png)  
+![Indice](screenshots/1.png)  
 Registro  
-![registro](screenshots/registro.png)  
-Login y boton de login  
-![login](screenshots/login.png)  
-Bienvenido  
-![bienvenido](screenshots/bienvenido.png)  
-Actualizar datos y tipo de usuario   
-![actualizar_datos](screenshots/actualizar_datos.png)  
-Publicar un inmueble  
-![publicar_inmueble](screenshots/publicar_inmueble.png)  
-Mis inmuebles  
-![mis_inmuebles](screenshots/mis_inmuebles.png)  
+![registro](screenshots/2.png)  
 Buscar inmuebles  
-![buscar_inmuebles](screenshots/buscar_inmuebles.png)  
+![buscar_inmuebles](screenshots/3.png)  
 Inmuebles disponibles  
-![inmuebles_disponibles](screenshots/inmuebles_disponibles.png)   
+![inmuebles_disponibles](screenshots/4.png) 
+Publicar un inmueble  
+![publicar_inmueble](screenshots/5.png)  
+Mis inmuebles  
+![mis_inmuebles](screenshots/6.png)  
+
 </div>  
 
 
