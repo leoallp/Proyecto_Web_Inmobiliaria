@@ -10,8 +10,8 @@ HTML, CSS, JavaScript, Bootstrap, Python, Django, PostgreSQL
 # Algunas sugerencias de instalación
 
 REQUIREMENTS:  
-Para instalar todos los paquetes listados en ev_inmobiliaria.txt usar:  
-pip install -r ev_inmobiliaria.txt               
+Para instalar todos los paquetes listados en requirements-ev_inmobiliaria.txt usar:  
+pip install -r requirements-ev_inmobiliaria.txt            
 
 BASE DE DATOS:  
 setting.py ya configurado para usar bbdd postgres; Verificar coincidencia del "NAME" y "PASSWORD" con la bbdd postgres a utilizar
