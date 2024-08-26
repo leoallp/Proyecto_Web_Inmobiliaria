@@ -1,7 +1,6 @@
 # Proyecto_Web_Inmobiliaria  
 ![Indice](screenshots/mobile.png)
 ![Indice](screenshots/tt.png)  
-![Indice](screenshots/nn.png)
 ![Indice](screenshots/1.png)
 
 
