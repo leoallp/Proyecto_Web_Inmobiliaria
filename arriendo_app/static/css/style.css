@@ -1,5 +1,10 @@
+body {
+    background: conic-gradient(at center top, rgb(17, 24, 39), rgb(243, 244, 246), rgb(17, 24, 39)) ;
+}
+
+
 .card-img-custom {
-    height: 320px; /* Establece una altura fija para las imágenes */
+    height: 350px; /* Establece una altura fija para las imágenes */
     object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor sin deformarla */
 }
 
@@ -7,12 +12,14 @@
     height: 100%; /* Asegura que la tarjeta ocupe todo el espacio del contenedor */
     display: flex;
     flex-direction: column; /* Asegura que el contenido de la tarjeta esté alineado verticalmente */
+    box-shadow: 0 4px 8px #8b9494;
+
 }
 
 .card-body {
     flex: 1; /* Permite que el cuerpo de la tarjeta ocupe el espacio disponible */
+    background: linear-gradient(rgb(243, 244, 246), rgb(229, 231, 235), rgb(209, 213, 219));
 }
-
 
 
 form label {
@@ -40,4 +47,24 @@ form ul {
 
 form input {
     width: 100%; /* Ocupa todo el ancho del contenedor */
+    border-color: #4071a1; /* Cambia el color del borde */
+    border-radius: 5px; /* Cambia el radio del borde */
+    box-shadow: 0 4px 8px #0e569e; /* Añade una sombra */
 }
+
+/*carousel*/
+
+.carousel {
+    box-shadow: 0 4px 8px #8b9494;
+    border-radius: 5px;
+}
+
+
+
+/* Cambiar el color del ícono del botón de alternancia en pantallas grandes */
+.navbar-toggler {
+    background-color: rgb(210, 209, 209);
+    
+}
+
+

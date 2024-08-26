@@ -3,7 +3,7 @@
 {% load static %}
 {% block content %}
 
-<div class="container mt-5">
+<div class="container mt-5 mb-4">
     <h1 class="text-center">¡Bienvenido a Nuestro Portal de Arriendos!</h1>
     <p class="mt-4 text-center">
         Encuentra tu próximo hogar o pon en arriendo tu propiedad con nosotros.
@@ -13,7 +13,7 @@
         <div class="row">
             <!-- Carousel a la derecha para pantallas grandes, arriba en pantallas pequeñas -->
             <div class="col-12 col-lg-6 order-1 order-lg-2 d-flex justify-content-center">
-                <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel" style="max-height: 600px; max-width: 800px; overflow: hidden;">
+                <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel" style="max-height: 520px; max-width: 800px; overflow: hidden;">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -88,9 +88,9 @@
     </div>
     
     
-    <div class="row mt-5">
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card">
+    <div class="row mt-4">
+        <div class="col-lg-4 col-md-6 my-4">
+            <div class="card ">
                 <img src="{% static 'img/casa.jpg' %}" class="card-img-top card-img-custom" alt="Casa">
                 <div class="card-body">
                     <h5 class="card-title">Casas</h5>
@@ -98,7 +98,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-lg-4 col-md-6 my-4">
             <div class="card">
                 <img src="{% static 'img/depto.jpg' %}" class="card-img-top card-img-custom" alt="Departamento">
                 <div class="card-body">
@@ -107,7 +107,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-lg-4 col-md-6 my-4">
             <div class="card">
                 <img src="{% static 'img/terreno.jpg' %}" class="card-img-top card-img-custom" alt="Terreno">
                 <div class="card-body">

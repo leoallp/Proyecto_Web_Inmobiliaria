@@ -2,15 +2,15 @@
 
 {% block content %}
 
-<div class="container col-8 mt-4 text-center">
-    <h1 class="my-5">¡Bienvenido {{nombre_usuario|capfirst}}!</h1>
+<div class="container col-8 my-5 py-5 text-center">
+    <h1 class="my-5 pt-4">¡Bienvenido {{nombre_usuario|capfirst}}!</h1>
 
     <h3>¡Actualiza Tus Datos!</h3>
-    <p>
-        Para acceder a todas las funciones disponibles como arrendatario o arrendador, es necesario que actualices tus datos.
-    </p>
-    <div class="text-center my-4">
-        <a class="btn btn-primary" href="{% url 'actualizar_datos' %}">Actualizar Datos</a>
+    <h4 class="mt-5 mb-2">
+        Para acceder a todas las funciones disponibles como arrendatario o arrendador <br> es necesario que actualices tus datos.
+    </h4>
+    <div class="text-center my-4  pb-5">
+        <a class="btn btn-primary  mb-5 mt-5" href="{% url 'actualizar_datos' %}">Actualizar Datos</a>
     </div>
 </div>
 {% endblock %}
