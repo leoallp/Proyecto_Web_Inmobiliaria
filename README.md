@@ -1,8 +1,9 @@
 # Proyecto_Web_Inmobiliaria  
-![Indice](screenshots/a1.png)  
-
-![Indice](screenshots/nn.png)
 ![Indice](screenshots/mobile.png)
+![Indice](screenshots/tt.png)  
+![Indice](screenshots/nn.png)
+![Indice](screenshots/1.png)
+
 
 # ******** Sugerencias de instalación ********
 
