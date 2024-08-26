@@ -1,12 +1,10 @@
-<div align="center">
-# "Inmobiliaria Ll"  
+# <div align="center" > "INMOBILIARIA LL" </div>
 
-  
-Aplicacion web de busqueda, publicacion y arriendo de inmuebles  
 
+<div align="center" > APLICACION WEB DE BUSQUEDA, PUBLICACION Y ARRIENDO DE INMUEBLES   </div> <br><br>   
 
 ![Indice](screenshots/0.png)  
-</div>
+
 # ******** Algunas sugerencias de instalación ********
 
 # Requirements
@@ -29,15 +27,15 @@ python consulta_inmuebles_por_region.py
 <div align="center">  
 
 Indice  
-![Indice](screenshots/1.png)  
+![Indice](screenshots/1.png) <br><br>     
 Registro  
-![registro](screenshots/2.png)  
+![registro](screenshots/2.png) <br><br>     
 Buscar inmuebles  
-![buscar_inmuebles](screenshots/3.png)  
+![buscar_inmuebles](screenshots/3.png)  <br><br>    
 Inmuebles disponibles  
-![inmuebles_disponibles](screenshots/4.png) 
+![inmuebles_disponibles](screenshots/4.png)  <br><br>   
 Publicar un inmueble  
-![publicar_inmueble](screenshots/5.png)  
+![publicar_inmueble](screenshots/5.png)  <br><br>    
 Mis inmuebles  
 ![mis_inmuebles](screenshots/6.png)  
 
