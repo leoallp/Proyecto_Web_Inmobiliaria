@@ -1,6 +1,7 @@
-# Proyecto_Web_Inmobiliaria
+# Proyecto_Web_Inmobiliaria  
+![Indice](screenshots/index.png)
 
-# ******** Sugerencias ********
+# ******** Sugerencias de instalación ********
 
 # Requirements
 Para instalar todos los paquetes listados en ev_inmobiliaria.txt usar:  
